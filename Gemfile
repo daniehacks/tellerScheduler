@@ -43,5 +43,10 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'rspec'
-gem 'rspec-rails'
+group :test do
+	gem 'rspec'
+	gem 'rspec-rails'
+	gem 'cucumber-rails'
+	gem 'database_cleaner'
+	gem 'spork'
+end
