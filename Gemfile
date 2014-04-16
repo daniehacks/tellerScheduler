@@ -43,10 +43,14 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'capybara', github: 'jnicklas/capybara', branch: 'master' # '2.2.1'
+end
+
 group :test do
 	gem 'rspec'
-	gem 'rspec-rails'
-	gem 'cucumber-rails'
+	gem 'cucumber-rails', :require => false
 	gem 'database_cleaner'
 	gem 'spork'
 end
