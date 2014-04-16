@@ -43,14 +43,19 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'capybara', github: 'jnicklas/capybara', branch: 'master' # '2.2.1'
+  gem 'factory_girl_rails'
 end
 
 group :test do
 	gem 'rspec'
+	gem 'capybara', github: 'jnicklas/capybara', branch: 'master' # '2.2.1'
 	gem 'cucumber-rails', :require => false
+	gem 'faker'
+	gem 'guard-rspec'
 	gem 'database_cleaner'
+	gem 'launchy'
 	gem 'spork'
 end
