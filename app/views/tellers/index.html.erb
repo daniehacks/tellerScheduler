@@ -1,12 +1,10 @@
-<h1>Listing tellers</h1>
+<h1>Tellers List</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th colspan=3>Actions</th>
     </tr>
   </thead>
 
@@ -14,9 +12,9 @@
     <% @tellers.each do |teller| %>
       <tr>
         <td><%= teller.name %></td>
-        <td><%= link_to 'Show', teller %></td>
-        <td><%= link_to 'Edit', edit_teller_path(teller) %></td>
-        <td><%= link_to 'Destroy', teller, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', teller %>|
+          <%= link_to 'Edit', edit_teller_path(teller) %>|
+          <%= link_to 'Destroy', teller, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
